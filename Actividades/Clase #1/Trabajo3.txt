@@ -1,0 +1,11 @@
+Se encuentran 6 segmentos en la url
+https://api.github.com:443/repos/bryancs/isw521/issues?state=open&labels=semana1#comentarios
+1.Esquema = https://
+2.Dominio = api.github.com
+3.Puerto = :443
+4.Ruta = /repos/bryancs/isw521/issues
+5.Query String = state=open&labels=semana1
+6.Fragment = #comentarios
+1.https://utn.ac.cr/cursos/isw-521/2026-II/san-carlos
+2.https://utn.ac.cr/estudiantes/2022-0001
+3.https://utn.ac.cr/cursos/isw-521/semanas/3/materiales

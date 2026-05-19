@@ -1,0 +1,35 @@
+1.
+A= Internet: 
+Justificacion:Es el mejor para esto ya que necesitamos acceso publico para todos los usuarios posibles
+B =Sistema interno de gestión de planillas para RRHH
+Topología: Intranet
+Justificación: Contiene información sensible de empleados y es de uso exclusivo del personal municipal. Se mantiene dentro de la red privada interna de la municipalidad, sin exposición al exterior.
+C =Portal donde empresas constructoras revisan permisos de construcción activos
+Topología: Extranet
+Justificación: Es un acceso controlado para usuarios externos autorizados (empresas del cantón). No es público como Internet, pero tampoco es interno; requiere autenticación y acceso restringido desde fuera de la red municipal.
+2.
+El sistema C (Portal Extranet) es el que requiere mayor inversión en seguridad.
+Razones:
+
+Está expuesto a usuarios externos (empresas), lo que aumenta el riesgo de ataques (inyecciones SQL, autenticación débil, robo de credenciales, etc.).
+Maneja información potencialmente sensible (permisos de construcción, datos de proyectos, posibles datos personales).
+Requiere mecanismos avanzados: autenticación fuerte (MFA), VPN o accesos segmentados, WAF, logging detallado, segmentación de red y actualizaciones constantes.
+A diferencia del sistema A (público pero de solo lectura/información general) y el B (interno y más controlado), el Extranet combina exposición externa con necesidad de confianza y control.
+3.
+¿Podría un mismo servidor físico alojar los tres sistemas de forma segura? ¿Cómo lo lograrías conceptualmente?
+Sí, es posible alojar los tres sistemas en un mismo servidor físico de forma segura mediante virtualización y segmentación.
+Cómo lograrlo conceptualmente:
+
+Hipervisor (VMware, Proxmox, Hyper-V o KVM): Crear máquinas virtuales (VMs) separadas o contenedores para cada sistema.
+VM1 → Sistema A (Internet) → En DMZ.
+VM2 → Sistema B (Intranet) → En red interna.
+VM3 → Sistema C (Extranet) → En zona semi-pública con acceso controlado.
+
+Firewall (pfSense, iptables, o del propio hipervisor): Reglas estrictas de tráfico entre las VMs y hacia el exterior.
+Segmentación de red: VLANs o redes virtuales aisladas para cada entorno (Internet, Intranet, Extranet).
+Medidas adicionales:
+Hardening del servidor físico y de cada VM.
+Diferentes niveles de acceso y políticas de seguridad por VM.
+Backup y cifrado de datos.
+Monitoreo centralizado (SIEM) y actualizaciones automáticas.
+Posible uso de contenedores (Docker + Kubernetes) con network policies para mayor aislamiento.

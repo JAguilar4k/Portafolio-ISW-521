@@ -1,0 +1,23 @@
+tcp/ip = transfer control protocol/internet protocol
+
+spa = Simple page application
+
+API = Application Programming Interface
+
+S = Single Responsibility
+O = Open/Closed
+L = Liskov Substitution
+I = Interface Segregation
+D =Dependency Inversion
+
+JWT = JSON WEB TOKEN
+
+SPOF = SINGLE POINT OF FAILURE
+
+DNS = Domain name service
+DMZ = Demilitarized Zone
+LAN = Local Area Network
+URI = Uniform Resource Identifier
+URL = Uniform Resource Loader
+URN = Uniform Resource Name
+UTF -8 = Unicode Transformation Format 8

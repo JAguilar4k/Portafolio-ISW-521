@@ -1,0 +1,4 @@
+1.No es correcto, el internet se refiere especificamente a redes fisicas, es importante ya que la diferencia entre www y el internet como tal es la de un recurso y lugar de publicacion.
+2. Serian Ambas, ya que por un lado sería la web la que utilice el internet para hacer viajar el contenido sobre toda dicha infraestructura, que es una inmensa red de computadoras conectadas entre si.
+La WW es una enorme colección de páginas que se asienta sobreesa red de computadoras.
+3.W3C se enfoca en capas de frontend IETF se encarga de la base para la creacion y publicacion por lo que ambos son necesarios pero IETF es mas importante
