@@ -1,0 +1,5 @@
+A. Let's Encrypt. Intermediate CA
+B. Domingo 2 de agosto de 2026
+C. TLS 1.3
+D. TLS_AES_256_GCM_SHA384, X25519 (253 bits)
+E. Se lanza una advertencia pero no  significa que deje de ser segura. Aunque no hay forma de comprobarlo a menos que se cerftifique otra vez
