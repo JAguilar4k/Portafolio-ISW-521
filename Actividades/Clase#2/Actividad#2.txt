@@ -1,0 +1,6 @@
+1. El beneficio principal que se gana es la capacidad de ocupar multiples tareas de manera simultanea, aumentando velocidad y metodos de entrega de paquetes en vez de ser lineal
+2. Porque TCP que es el protocolo utilizado en HTTP/2 tiene su propia version de HOL Blocking que no se ha tratado
+3. Si pero se debe realizar con mucho cuidado y orden. Requiere un firewall/load balancer que trabaje y soporte UDP en el puerto 443, Los equipos de seguridad deben adaptarse a QUIC
+Por lo que lo principal serian enfocarse en que el sistema actual pueda soportar el salto, las tecnologias utilizadas no se encuentre n muy anticuadas y que los equipos de seguridad se encuentren en estado optimo para su uso
+4.Metodo en Consola: curl -sI https://sitio.com -w "%{http_version}\n" -o /dev/null
+Se descargaria una tabla de configuracion 
