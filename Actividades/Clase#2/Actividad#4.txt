@@ -1,0 +1,5 @@
+1. 17 pico segundos 
+2. 275.42ms
+3.102.58ms
+4.212 43 http2
+5.PNG (1572kb) SI se puede convertir a WebP/AVIF
