@@ -1,0 +1,4 @@
+1. NO. Al ser archivos CRÍTICOS se debe garantizar el estado y calidad de los archivos transferidos en vez de la velocidad. Si uno de esos archivos llega de manera corrupta puede generar un mayor problema a si llega de manera tardía.
+2. Perderíamos las confirmaciones, control y seguridad de la calidad de lops archivos al enviarse
+3. Aplicación de Streaming de tiempo real, Por ejemplo una pagina web de streaming de deportes, a pesar de que el bitrate puede sufrir de manera que afecte la calidad de video de igual manera el streaming del partido estaría relativamente acoplada de manera simultanea al partido en tiempo real.
+4. Podría generar un tiempo de respuesta exageradamente alto debido a la cantidad de subprocesos que ocurren a la hora de generar conexiones y enviar paquetes simples.
