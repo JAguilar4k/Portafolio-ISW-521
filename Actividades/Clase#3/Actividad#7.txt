@@ -1,0 +1,5 @@
+1.SSG
+2.CSR
+3.SSG
+Justificacion:
+SSG se utiliza para paginas estaticas sin necesidad de cambios reales a tiempo real. A la hora de generar la pagina asi se mantiene aumentando la eficiencia.

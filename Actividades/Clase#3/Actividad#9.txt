@@ -1,0 +1,22 @@
+1.SCP Mas seguro, usa SSH, mas simple y directo
+scp -r dist/* julian@123.45.67.89:/var/www/mi-app
+2. Utilizar un .env
+en el vps
+nano /var/www/mi-app/.env
+
+/Documento.env
+DB_URL=mongodb+srv://...
+JWT_SECRET=super-long-secret-key-que-nunca-debes-compartir
+PORT=3000
+NODE_ENV=production
+/Documento.env
+
+JS
+require('dotenv').config();
+
+const dbUrl = process.env.DB_URL;
+const jwtSecret = process.env.JWT_SECRET;
+const port = process.env.PORT || 3000;
+
+3. Riesgo de seguridad alto de la integridad de la app, Diferencias en los entornos de trabajo, Exposicion de datos confidenciales.
+Si se llega a filtrar el repositorio se filtra la app junto con las credenciales de desarrolladores y claves posiblemente esenciales.

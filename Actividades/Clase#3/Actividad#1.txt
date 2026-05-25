@@ -1,0 +1,18 @@
+1.
+Primero se ejecutaria un ping con la ip de la maquina para comprobar conectividad
+ping -n 4 <IP_del_servidor>
+Despues se ejecuta systeminfo | find "Boot Time": para saber si la maquina lleva mucho tiempo encendida y no congelada
+sc query nginx para verificar el proceso y su funcionalidad correcta
+
+2.Revisar el estado del servicio con 
+sc query nginx
+ver los eventos con
+eventvwr
+net stop nginx para parar el servicio
+net start nginx para iniciarlo de nuevo
+sc query nginx para revisar de nuevo el estado
+
+3.Si la vm no responde al ping
+Error fatal del sistema o congelamiento severo
+Rollback
+Kernel panic

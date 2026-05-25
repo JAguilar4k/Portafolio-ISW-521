@@ -1,0 +1,43 @@
+1.
+192.168.1.10    portafolio.local
+192.168.1.10    api.local
+192.168.1.10    admin.local
+2.
+http {
+    server {
+        listen 80;
+        server_name portafolio.local;
+
+        root C:/nginx/html/portafolio;
+        index index.html;
+
+        location / {
+            try_files $uri $uri/ =404;
+        }
+    }
+
+    server {
+        listen 80;
+        server_name api.local;
+
+        root C:/nginx/html/api;
+        index index.html;
+
+        location / {
+            try_files $uri $uri/ =404;
+        }
+    }
+
+    server {
+        listen 80;
+        server_name admin.local;
+
+        root C:/nginx/html/admin;
+        index index.html;
+
+        location / {
+            try_files $uri $uri/ =404;
+        }
+    }
+}
+3.Se convierte en el servidor predeterminado por lo que cualquier intento de conexion no especifico se redireccionara a esa pagina

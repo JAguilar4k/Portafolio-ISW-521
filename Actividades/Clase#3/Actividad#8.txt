@@ -1,0 +1,2 @@
+1.Se descarta la opcion C debido a que es mas susceptible a ataques XSS
+2.B debido a que da mayor seguridad contra ataques XSS, Invalidacion inmediata de sesiones, Cookies  HTTPONLY, evita que JS pueda ver las cookies.

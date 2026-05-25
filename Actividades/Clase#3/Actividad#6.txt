@@ -1,0 +1,6 @@
+1. Aplicacion Web
+2.Sitio Web
+3.App Web
+Justificaciones:
+App webs: Permite gran cantidad de interacciones para el usuario desde registrarse hasta comentarios o modificaciones hasta creaciones propias
+Sitios Webs: Unicamente permite la lectura de datos es meramente informativo y no permite interaccion de usuario con el sitio fuera de moverse en el.

@@ -1,0 +1,3 @@
+1. Bare Metal debido a la complejidad de los datos y seguridad que se debe manejar sobre la transaccion de criptomonedas de manera que mantiene latencia baja
+2.VPS Trafico variable por lo que se necesita escalar dinamicamente, siempre y cuando se pueda configurar de mejor manera. Permite la escalabilidad facil y rapida
+3.Contenedores Cada equipo puede desplegar su propio sistema de microservicios sin llegar a afectar a otros trabajadores, estrategias avanzadas como Blue-Green, Deployments, y Rolling Updates ademas de la facilidad de gestionamiento a nivel de contenedores y namespaces

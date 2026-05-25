@@ -1,0 +1,3 @@
+1. Se recomienda Nginx debido a que la misma tiene una capacidad de conexiones extremadamente alta sin utilizar procesos por separado (Como lo que hace Apache Prefork). Nginx utiliza 4 workers para realizar las tareas en vez de generar un proceso por cada conexion generando mayor eficiencia de memoria. La velocidad de respuesta Tambien es un plus general debido a que al reducir la memoria utilizada Nginx tiene un tiempo de respuesta mucho mayor.
+2.No es viable ya que el modulo asigna un proceso completo por cada conexion del sistema operativo
+3. Proxy y upgrade Ya que con estos permiten realizar cambios de los protocolos HTTP a un mejor soporte para tiempo real ademas de habilitar una conexion constante sin cerrar la conexion constantemente entre mensajes

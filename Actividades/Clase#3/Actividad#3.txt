@@ -1,0 +1,4 @@
+1.El puerto 8080 ya se encuentra en uso probablemente por un http Alterno. Dos conexiones estan intentando utilizar el mismo puerto.
+2.netstat -ano | findstr ":8080"
+3.netstat -ano | findstr ":8080" && taskkill /PID 1234 /F
+4.Crear un script para matar procesos de manera automatica y limpiar puertos, utilizar herramientas como kill-port, Asignar puertos en vez de utilizar predeterminados
