@@ -1,0 +1,14 @@
+1. git fetch origin, por si el push del compañero tiene bugs o errores graves y evitar perder los cambios que no hemos guardado
+2.
+git fetch origin           
+git rebase origin/main        
+
+git push origin main     
+    
+3. Git falla debido a que los cambios locales no están al mismo nivel que los cambios en la nube, debido a que tu trabajo no tiene los últimos cambios del compañero
+git fetch origin              
+git rebase origin/main        
+# si hay conflictos:
+#   git add <archivo>
+#   git rebase --continue
+git push origin main          

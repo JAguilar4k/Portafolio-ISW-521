@@ -1,0 +1,1 @@
+CSSOM =conjunto de apis representado como arbol de todos los estilos css que se han leido y procesado en una pagina. = CSS OBJECT MODEL

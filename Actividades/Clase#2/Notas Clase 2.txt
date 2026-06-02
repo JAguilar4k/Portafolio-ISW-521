@@ -1,0 +1,9 @@
+ACK = Acuse de Recibido (Saber si llega o no)
+RTT = Tiempo de ida y vuelta
+UDP = Velocidad (User Datagram Protocol)
+TCP = Calidad (Transmission Control Protocol)
+HTTP = HyperText Transfer Protocol
+TLS = Transport Layer Security
+(Flujo)Pila de Https: HTTP, TLS, TCP, IP
+ECDHE = Ellipic Curve Diffie-Hellman Ephemeral
+PKI = Public Key Interface

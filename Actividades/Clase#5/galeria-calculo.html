@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galería Multimedia – Cálculo e Integrales | CursoMat</title>
+  <meta name="description" content="Galería multimedia del curso de Cálculo Integral: clases en video, podcasts y recursos visuales sobre integrales definidas e indefinidas." />
+</head>
+
+<body>
+
+  <!-- ============================================================
+       ENCABEZADO DEL CURSO
+  ============================================================ -->
+  <header>
+    <h1>Cálculo Integral — Curso Completo</h1>
+    <p>
+      Bienvenido a la galería de recursos multimedia del módulo de
+      <strong>Cálculo e Integrales</strong>. Aquí encontrarás la imagen
+      introductoria del módulo, la clase en video, el podcast de repaso
+      y la ubicación de la sede presencial.
+    </p>
+  </header>
+
+  <main>
+
+    <!-- ==========================================================
+         SECCIÓN 1 — IMAGEN PRINCIPAL CON <picture>
+         Requisito: 2 fuentes (<source>) + <img> de respaldo
+         Temática: Representación visual de una integral definida
+    =========================================================== -->
+    <section aria-labelledby="sec-imagen-titulo">
+
+      <h2 id="sec-imagen-titulo">Módulo 4: La Integral Definida</h2>
+
+      <p>
+        La imagen a continuación ilustra el área bajo la curva
+        <em>f(x) = x²</em> en el intervalo [0, 3], concepto central
+        de la integral de Riemann.
+      </p>
+
+      <figure>
+        <picture>
+
+          <!-- Fuente 1: Formato WebP (navegadores modernos, mejor compresión) -->
+          <source
+            srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Integral_example.svg/1024px-Integral_example.svg.png"
+            type="image/png"
+            media="(min-width: 600px)"
+          />
+
+          <!-- Fuente 2: Formato PNG estándar (compatibilidad amplia) -->
+          <source
+            srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Integral_example.svg/512px-Integral_example.svg.png"
+            type="image/png"
+            media="(max-width: 599px)"
+          />
+
+          <!-- Imagen de respaldo obligatoria -->
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Integral_example.svg/800px-Integral_example.svg.png"
+            alt="Gráfica de la función f(x) = x cuadrado en el intervalo cerrado de 0 a 3, con el área bajo la curva sombreada en azul, representando la integral definida de Riemann igual a 9."
+            title="Integral Definida de f(x) = x² en [0, 3] — Área = 9 unidades cuadradas"
+            width="800"
+            height="480"
+          />
+
+        </picture>
+
+        <figcaption>
+          <strong>Figura 1.</strong> Área bajo la curva
+          <em>f(x) = x²</em> en [0, 3].
+          Integral definida: ∫₀³ x² dx = [x³/3]₀³ = 9.
+          Fuente: Wikimedia Commons (dominio público).
+        </figcaption>
+      </figure>
+
+    </section>
+
+    <!-- ==========================================================
+         SECCIÓN 2 — VIDEO DE CLASE
+         Requisito: controls, poster, 2 formatos (MP4 + WebM)
+         Temática: Clase sobre técnicas de integración por partes
+    =========================================================== -->
+    <section aria-labelledby="sec-video-titulo">
+
+      <h2 id="sec-video-titulo">Clase 12 — Integración por Partes</h2>
+
+      <p>
+        En esta sesión de 45 minutos resolveremos integrales de la forma
+        ∫ u dv mediante la fórmula de integración por partes:
+        <strong>∫ u dv = uv − ∫ v du</strong>.
+        Se incluyen 6 ejemplos progresivos con funciones logarítmicas,
+        trigonométricas y exponenciales.
+      </p>
+
+      <figure>
+        <video
+          controls
+          poster="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Integral_example.svg/800px-Integral_example.svg.png"
+          width="854"
+          height="480"
+          title="Clase 12: Integración por Partes — Curso de Cálculo Integral, Módulo 4"
+          aria-label="Video de la clase 12 sobre integración por partes. Duración aproximada: 45 minutos."
+          preload="metadata"
+        >
+          <!-- Formato 1: MP4 (H.264) — máxima compatibilidad -->
+          <source
+            src="videos/clase-12-integracion-por-partes.mp4"
+            type="video/mp4"
+          />
+
+          <!-- Formato 2: WebM (VP9) — mejor compresión en Chrome/Firefox -->
+          <source
+            src="videos/clase-12-integracion-por-partes.webm"
+            type="video/webm"
+          />
+
+          <!-- Texto alternativo para navegadores sin soporte de video -->
+          <p>
+            Tu navegador no soporta reproducción de video HTML5.
+            Puedes
+            <a
+              href="videos/clase-12-integracion-por-partes.mp4"
+              download
+              title="Descargar video de la Clase 12: Integración por Partes en formato MP4"
+            >
+              descargar el video MP4 de la Clase 12
+            </a>
+            o
+            <a
+              href="videos/clase-12-integracion-por-partes.webm"
+              download
+              title="Descargar video de la Clase 12: Integración por Partes en formato WebM"
+            >
+              descargarlo en formato WebM
+            </a>.
+          </p>
+
+        </video>
+
+        <figcaption>
+          <strong>Video 1 — Clase 12:</strong> Integración por Partes.
+          Módulo 4, Unidad 2. Prof. Dra. Alejandra Montes.
+          Duración: 44 min 30 s. Resolución: 854 × 480 px.
+        </figcaption>
+      </figure>
+
+    </section>
+
+    <!-- ==========================================================
+         SECCIÓN 3 — AUDIO DE PODCAST
+         Requisito: controls, loop desactivado explícitamente
+         Temática: Podcast de repaso sobre integrales impropias
+    =========================================================== -->
+    <section aria-labelledby="sec-audio-titulo">
+
+      <h2 id="sec-audio-titulo">Podcast de Repaso — Integrales Impropias</h2>
+
+      <p>
+        Episodio 8 del podcast <em>MatemáticaCast</em>: discusión oral
+        sobre la convergencia y divergencia de integrales impropias,
+        criterios de comparación y ejemplos clásicos como
+        ∫₁^∞ (1/xᵖ) dx. Ideal para repasar durante el trayecto o
+        antes del examen.
+      </p>
+
+      <figure>
+
+        <audio
+          controls
+          loop="false"
+          preload="metadata"
+          title="Podcast Episodio 8: Integrales Impropias — MatemáticaCast, Curso de Cálculo Integral"
+          aria-label="Reproductor de audio del episodio 8 del podcast MatemáticaCast sobre integrales impropias. Duración: 28 minutos. Sin reproducción en bucle."
+        >
+          <!-- Formato principal: MP3 — compatibilidad universal -->
+          <source
+            src="audio/podcast-ep08-integrales-impropias.mp3"
+            type="audio/mpeg"
+          />
+
+          <!-- Formato alternativo: OGG (Vorbis) — Firefox / código abierto -->
+          <source
+            src="audio/podcast-ep08-integrales-impropias.ogg"
+            type="audio/ogg"
+          />
+
+          <!-- Texto de respaldo -->
+          <p>
+            Tu navegador no soporta reproducción de audio HTML5.
+            <a
+              href="audio/podcast-ep08-integrales-impropias.mp3"
+              download
+              title="Descargar Podcast Episodio 8: Integrales Impropias en formato MP3"
+            >
+              Descarga el episodio 8 en formato MP3
+            </a>.
+          </p>
+
+        </audio>
+
+        <figcaption>
+          <strong>Audio — Episodio 8:</strong> «Integrales Impropias:
+          ¿Converge o diverge?». <em>MatemáticaCast</em>, temporada 2.
+          Conducido por: Prof. Carlos Vega y Dra. Alejandra Montes.
+          Duración: 28 min 15 s.
+          <br />
+          <small>
+            ⚠ La reproducción en bucle está <strong>desactivada</strong>
+            en este reproductor.
+          </small>
+        </figcaption>
+      </figure>
+
+    </section>
+
+    <!-- ==========================================================
+         SECCIÓN 4 — IFRAME DE GOOGLE MAPS
+         Requisito: sandbox con permisos correctos y título descriptivo
+         Temática: Sede del campus donde se imparten las clases presenciales
+    =========================================================== -->
+    <section aria-labelledby="sec-mapa-titulo">
+
+      <h2 id="sec-mapa-titulo">Sede Presencial — Campus Matemáticas UCR</h2>
+
+      <p>
+        Las sesiones presenciales de tutorías y exámenes del curso se
+        imparten en la
+        <strong>
+          Escuela de Matemática, Universidad de Costa Rica,
+          Ciudad Universitaria Rodrigo Facio, San José, Costa Rica.
+        </strong>
+        Encuentra la ubicación exacta en el mapa interactivo a continuación.
+      </p>
+
+      <figure>
+
+        <!--
+          sandbox permite:
+            allow-scripts         → ejecutar JS interno del iframe (necesario para mapa interactivo)
+            allow-same-origin     → acceso a cookies/storage del mismo origen (Maps lo requiere)
+            allow-popups          → abrir enlace "Ver mapa más grande" en pestaña nueva
+            allow-forms           → permitir el buscador interno del mapa
+
+          NO se incluye allow-top-navigation para evitar que el iframe
+          redirija la página padre — buena práctica de seguridad.
+        -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.0!2d-84.05!3d9.94!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e3430e7c3b2b%3A0xc4e3d8e0e4c3d8e0!2sEscuela%20de%20Matem%C3%A1tica%2C%20UCR!5e0!3m2!1ses!2scr!4v1700000000000!5m2!1ses!2scr"
+          width="800"
+          height="450"
+          title="Mapa de Google Maps que muestra la ubicación de la Escuela de Matemática de la Universidad de Costa Rica, Ciudad Universitaria Rodrigo Facio, San José, Costa Rica"
+          aria-label="Mapa interactivo de Google Maps con la ubicación de la Escuela de Matemática UCR. Puedes hacer zoom y desplazarte para explorar los alrededores del campus."
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
+        >
+          <p>
+            Tu navegador no admite iframes. Puedes
+            <a
+              href="https://maps.google.com/?q=Escuela+de+Matematica,+Universidad+de+Costa+Rica"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Abrir en Google Maps: Escuela de Matemática, UCR, San José, Costa Rica"
+            >
+              ver la ubicación directamente en Google Maps
+            </a>.
+          </p>
+        </iframe>
+
+        <figcaption>
+          <strong>Mapa 1 — Sede Presencial:</strong>
+          Escuela de Matemática, Universidad de Costa Rica (UCR).
+          Ciudad Universitaria Rodrigo Facio, San Pedro de Montes de Oca,
+          San José, Costa Rica.
+          <br />
+          Coordenadas aproximadas: 9.9374° N, 84.0508° O.
+          <br />
+          <a
+            href="https://maps.google.com/?q=Escuela+de+Matematica+UCR+San+Jose+Costa+Rica"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Abrir la ubicación de la Escuela de Matemática UCR en Google Maps en una pestaña nueva"
+          >
+            Ver mapa completo en Google Maps ↗
+          </a>
+        </figcaption>
+      </figure>
+
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       PIE DE PÁGINA
+  ============================================================ -->
+  <footer>
+    <hr />
+    <p>
+      <strong>CursoMat — Cálculo Integral</strong> &copy; 2026.
+      Todos los recursos multimedia son de uso educativo.
+      Módulo 4 · Versión 3.1 · Última actualización: junio de 2026.
+    </p>
+    <address>
+      Escuela de Matemática, Universidad de Costa Rica,
+      San Pedro de Montes de Oca, San José, Costa Rica.
+      <br />
+      Contacto: <a href="mailto:cursomat@ucr.ac.cr" title="Enviar correo al equipo del curso CursoMat">cursomat@ucr.ac.cr</a>
+    </address>
+  </footer>
+
+</body>
+</html>

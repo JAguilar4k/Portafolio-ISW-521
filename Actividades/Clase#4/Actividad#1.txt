@@ -1,0 +1,13 @@
+1.
+git add (archivos relacionados al login)
+git commit -m "fix(auth): corrected credentials validation on login"
+git add (archivos relacionados al dashboard)
+git commit -m "feat(dashboard): add date range filter to search module"
+git add (nueva implementacion de una feature)
+git commit -m "feat(client): implement report export module"
+git add (archivos express como dependencia)
+git commit -m "chore(deps): add express as project dependency"
+
+2. El gitignore deberia incluir el .env y el node_modules
+
+3.Estado de trabajo, estado de espera 

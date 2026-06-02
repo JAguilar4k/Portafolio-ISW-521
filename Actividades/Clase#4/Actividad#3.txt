@@ -1,0 +1,11 @@
+1.3 way merge tiene commits nuevos por lo que hay una divergencia para la feature de dark-mode
+git fetch origin
+git log origin/feature/dark-mode
+git diff HEAD origin/feature/dark-mode
+git show d7e3
+git show b2f8
+3.
+Qué se hizo: Resumen del cambio
+Por qué se hizo: Motivo, problema que resuelve o ticket relacionado
+Cómo probarlo: Pasos para reproducir y verificar que funciona
+Evidencia: Screenshots o logs si hay cambios de UI o comportamiento

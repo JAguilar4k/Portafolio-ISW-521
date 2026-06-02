@@ -1,0 +1,49 @@
+<blockquote>
+1.Bloque
+2.semantico
+3.A la hora de citar un autor
+
+<span>
+1.linea
+2.Presentacional
+3.Agrupar elementos de texto
+
+<strong>
+1.linea
+2.Semantico
+3.Resaltar una palabra o frase
+
+<article>
+1.Bloque
+2.Semantico
+3.A la hora de presentar un objeto o dato que tiene sentido fuera de la pagina
+
+<b>
+1.linea
+2.Presentacional
+3.Resaltar una palabra o frase
+
+<time>
+1.line
+2.Semantico
+3.Paginas web de horas de acuerdo a zonas horarias
+
+<ul>
+1.Bloque
+2.Semantico
+3.Listar objetos sin orden especifico
+
+<mark>
+1.Lineal
+2.Semantica
+3.Resaltar una palabra o frase
+
+<code>
+1.linea
+2.Semantico
+3.Compartir codigo
+
+<section>
+1.Bloque
+2.Semantico
+3.Agrupar contenido dentro de la pagina
