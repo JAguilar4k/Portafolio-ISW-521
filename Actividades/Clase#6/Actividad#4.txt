@@ -1,0 +1,18 @@
+Parrafo#1 Verde 
+Por el orden jerarquico contenido green tiene un ID
+
+Selector	Especificidad
+p	(0,0,1)
+.texto	(0,1,0)
+main p.texto	(0,1,2)
+.texto.destacado	(0,2,0)
+#contenido p	(1,0,1)
+
+Parrafo#2 Verde
+Lo mismo Contenido p green tiene un id
+Comparación de especificidades
+Selector	Especificidad
+p	(0,0,1)
+.texto	(0,1,0)
+main p.texto	(0,1,2)
+#contenido p	(1,0,1)

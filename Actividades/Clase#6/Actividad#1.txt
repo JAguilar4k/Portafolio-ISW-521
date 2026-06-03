@@ -1,0 +1,3 @@
+1. 4.5:1
+2.Cumple con AA no con AAA
+3. Existe un Umbral para AA pero si cumple
