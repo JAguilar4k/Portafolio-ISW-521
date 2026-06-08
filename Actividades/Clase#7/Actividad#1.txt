@@ -1,0 +1,3 @@
+1.El Float es completamente neutralizado debido a que el formato al activarse el FFC (Flex Formatting context) deshabilita o ignora el BFC (Block Formatting Context) Por lo que el item-a se comportara como un bloque de 200px de ancho posicionado en el eje principal del flex container y el efecto de float es completamente neutralizado
+2.Porque es sobreescrito de manera que ahora cambia a un display:block
+3.No margin collapsing no ocurre en ningun FFC, el margen negativo se va a aplicar pero no se va a colapsar

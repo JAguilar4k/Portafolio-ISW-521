@@ -1,0 +1,16 @@
+1.flex-wrap: wrap
+2.align-items
+3.
+.galeria {
+  display: flex;
+  flex-wrap: wrap;           /* ← CORRECCIÓN CLAVE: habilita múltiples líneas */
+  width: 600px;
+  height: 300px;
+  align-content: space-between; /* ahora SÍ tiene efecto: 2 líneas a distribuir */
+gap: 10px;
+}
+
+.card {
+  width: 150px;
+  height: 100px;
+}

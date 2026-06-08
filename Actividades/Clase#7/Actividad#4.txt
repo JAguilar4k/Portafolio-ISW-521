@@ -1,0 +1,10 @@
+1.Hacia abajo gracias a como los ejes son definidos en Flexbox
+2.cross axis en horizontal
+3.
+.toolbar {
+  display: flex;
+  /* flex-direction: row; ← valor por defecto, no necesita declararse */
+  justify-content: flex-end;  /* Main Axis = horizontal → empuja a la derecha */
+  align-items: center;        /* Cross Axis = vertical → centra verticalmente */
+  height: 80px;
+}

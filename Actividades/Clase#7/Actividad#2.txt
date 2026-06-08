@@ -1,0 +1,12 @@
+1. 
+ROW = Eje Principal horizontal
+COL =Eje Principal vertical
+2.
+ROW = Eje Cruzado vertical
+COL =Eje Cruzado horizontal
+3.
+ROW = Eje Principal vertical
+COL =Eje Principal horizontal
+4.
+ROW = Eje Principal fija el ancho
+COL =Eje Cruzado fija el ancho pero el eje principal queda vertical
