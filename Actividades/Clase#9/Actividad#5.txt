@@ -1,0 +1,21 @@
+/* ── BASE: móvil (sin media query) ─────────────────── */
+.productos {
+  display: grid;
+  grid-template-columns: 1fr;   /* 1 columna en móvil  */
+  gap: 16px;                    /* gap reducido        */
+}
+
+/* ── TABLET: 600px en adelante ──────────────────────── */
+@media (min-width: 600px) {
+  .productos {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  }
+}
+
+/* ── DESKTOP: 1024px en adelante ───────────────────── */
+@media (min-width: 1024px) {
+  .productos {
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    gap: 32px;                             /* gap mayor  */
+  }
+}

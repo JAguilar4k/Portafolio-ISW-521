@@ -1,0 +1,3 @@
+1.Falta Viewport
+2.Devtools
+3.Agregar Viewport

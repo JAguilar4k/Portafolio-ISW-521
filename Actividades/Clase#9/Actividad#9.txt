@@ -1,0 +1,40 @@
+:root {
+ color-green:  #0a7d4f;
+ color-white:  #ffffff;
+ space-4:   16px;  
+ radius-2:   8px;  
+ border-width:  2px;
+ border-style-solid: solid;
+ 
+  color-brand-primary:        var(color-green);
+  color-text-on-primary:      var(color-white);
+
+
+  color-interactive-default:  var(color-brand-primary);
+  color-border-brand:         var(color-brand-primary);
+
+  spacing-component:       var(space-4);
+
+  radius-component:        var(radius-2);
+  --border-brand:
+    var(border-width)
+    var(border-style-solid)
+    var(color-border-brand);
+}
+
+
+.boton-comprar {
+  background:     var(color-brand-primary);
+  color:          var(color-text-on-primary);
+  padding:        var(spacing-component);
+  border-radius:  var(radius-component);
+}
+
+.enlace-activo {
+  color: var(color-interactive-default);
+}
+
+.tarjeta-promo {
+  border:         var(border);
+  padding:        var(spacing-component);
+  border-radius:  var(radius-component);
