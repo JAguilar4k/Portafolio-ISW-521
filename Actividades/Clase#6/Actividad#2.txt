@@ -1,0 +1,155 @@
+1. El problema nace del orden de tabulacion nativo del arbol DOM ya que hay elementos que no se pueden enfocar mediante el tab de forma normal ya que no existe ningun mecanismo en HTML que restrinja el ciclo automatic de tab a otro contenedor. El sistema no sabe que debe haber una zona de focus exclusiva
+2.La idea es atraparlo mediante un event.preventDefault() lo que cancela el salto nativo del navegador antes de ejecutar el salto correcto, de manera que permitira al foco regresar al elemento que lo abrio
+3.
+/**
+ * FocusTrap — Gestión de foco accesible para modales y diálogos.
+ * Implementa el patrón WCAG 2.1 Success Criterion 2.1.2 (No Keyboard Trap)
+ * en su variante "ciclo interno controlado".
+ */
+function createFocusTrap(modalElement) {
+
+  // ─── Selector de elementos interactivos ──────────────────────────────────
+  // Se incluyen todos los elementos nativamente enfocables más cualquiera
+  // con tabindex explícito. Se excluyen los que tienen tabindex="-1"
+  // (que son enfocables por JS pero no por Tab nativo).
+  const FOCUSABLE_SELECTOR = [
+    'a[href]',
+    'button:not([disabled])',
+    'input:not([disabled])',
+    'select:not([disabled])',
+    'textarea:not([disabled])',
+    '[tabindex]:not([tabindex="-1"])'
+  ].join(', ');
+
+  // Guardamos el elemento que tenía el foco ANTES de abrir el modal,
+  // para restaurarlo al cerrar (buena práctica de accesibilidad).
+  let elementThatOpenedModal = null;
+
+  /**
+   * Obtiene la lista actualizada de elementos enfocables dentro del modal.
+   * Se llama en cada evento para reflejar cambios dinámicos del DOM
+   * (ej: un botón que se habilita/deshabilita).
+   *
+   * @returns {HTMLElement[]} Array de elementos enfocables en orden DOM.
+   */
+  function getFocusableElements() {
+    // querySelectorAll devuelve un NodeList; lo convertimos a Array
+    // para poder acceder a .length e índices fácilmente.
+    return Array.from(
+      modalElement.querySelectorAll('a, button, input, [tabindex]')
+    ).filter(el =>
+      // Filtramos los que están realmente disponibles para el foco
+      !el.disabled && el.tabIndex !== -1
+    );
+  }
+
+  /**
+   * Manejador principal del evento keydown.
+   * Solo actúa cuando se presiona Tab (con o sin Shift).
+   */
+  function handleKeyDown(event) {
+
+    // Ignoramos cualquier tecla que no sea Tab
+    if (event.key !== 'Tab') return;
+
+    const focusableElements = getFocusableElements();
+
+    // Caso borde: si no hay elementos enfocables, bloqueamos el Tab
+    // para evitar que el foco escape al fondo.
+    if (focusableElements.length === 0) {
+      event.preventDefault();
+      return;
+    }
+
+    // ─── Identificamos el primer y último elemento enfocable ─────────────
+    // El PRIMER elemento es el índice 0 del array (orden del DOM).
+    const firstElement = focusableElements[0];
+
+    // El ÚLTIMO elemento es el índice final del array.
+    const lastElement = focusableElements[focusableElements.length - 1];
+
+    // ─── Lógica de ciclo del foco ─────────────────────────────────────────
+
+    if (event.shiftKey) {
+      // CASO: Shift + Tab (navegación hacia ATRÁS)
+      // Si el foco está en el PRIMER elemento, en lugar de escapar
+      // hacia el fondo, lo enviamos al ÚLTIMO elemento del modal.
+      if (document.activeElement === firstElement) {
+        event.preventDefault(); // ← Cancela el salto nativo del navegador
+        lastElement.focus();    // ← Redirige manualmente al último
+      }
+      // Si no es el primer elemento, el Shift+Tab nativo funciona bien
+      // (retrocede dentro del modal normalmente).
+
+    } else {
+      // CASO: Tab (navegación hacia ADELANTE)
+      // Si el foco está en el ÚLTIMO elemento, en lugar de escapar
+      // hacia el fondo, lo enviamos al PRIMER elemento del modal.
+      if (document.activeElement === lastElement) {
+        event.preventDefault(); // ← Cancela el salto nativo del navegador
+        firstElement.focus();   // ← Redirige manualmente al primero
+      }
+      // Si no es el último elemento, el Tab nativo funciona bien
+      // (avanza dentro del modal normalmente).
+    }
+  }
+
+  // ─── API pública del Focus Trap ───────────────────────────────────────────
+  return {
+
+    /**
+     * Activa la trampa de foco.
+     * Debe llamarse al abrir el modal.
+     */
+    activate() {
+      // Guardamos quién tenía el foco para restaurarlo al cerrar
+      elementThatOpenedModal = document.activeElement;
+
+      // Movemos el foco al primer elemento interactivo del modal
+      const focusableElements = getFocusableElements();
+      if (focusableElements.length > 0) {
+        focusableElements[0].focus();
+      }
+
+      // Registramos el listener en el modal (no en document,
+      // para que la captura sea local y fácil de remover)
+      modalElement.addEventListener('keydown', handleKeyDown);
+    },
+
+    /**
+     * Desactiva la trampa de foco.
+     * Debe llamarse al cerrar el modal.
+     */
+    deactivate() {
+      modalElement.removeEventListener('keydown', handleKeyDown);
+
+      // Restauramos el foco al elemento que abrió el modal
+      // (WCAG 2.4.3 - Focus Order)
+      if (elementThatOpenedModal) {
+        elementThatOpenedModal.focus();
+        elementThatOpenedModal = null;
+      }
+    }
+  };
+}
+
+// ─── Ejemplo de uso ───────────────────────────────────────────────────────────
+const modal = document.querySelector('[role="dialog"]');
+const trap = createFocusTrap(modal);
+
+// Al abrir el modal:
+document.querySelector('#btn-delete').addEventListener('click', () => {
+  modal.removeAttribute('hidden');
+  trap.activate();
+});
+
+// Al cerrar el modal (Confirmar o Cancelar):
+modal.querySelector('#btn-confirm').addEventListener('click', () => {
+  modal.setAttribute('hidden', '');
+  trap.deactivate(); // El foco regresa al botón "Eliminar"
+});
+
+modal.querySelector('#btn-cancel').addEventListener('click', () => {
+  modal.setAttribute('hidden', '');
+  trap.deactivate(); // El foco regresa al botón "Eliminar"
+});

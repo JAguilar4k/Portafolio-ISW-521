@@ -1,0 +1,4 @@
+1.Fala por no estar definida
+2.Falla al no estar definida, Falla al no estar en una condicional
+3.Falla porque se llama obj vacio.
+4.Llaves mal colocadas por lo que soplo imprime 3.

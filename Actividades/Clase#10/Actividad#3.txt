@@ -1,0 +1,8 @@
+1. 13 String
+2. 3 Num
+3. 2 Num
+4. Nan Num
+5. true bool
+6. number string
+7. false bool
+8. true bool
