@@ -1,0 +1,13 @@
+{
+  "name": "reto-final-isw521",
+  "version": "1.0.0",
+  "description": "Reto Final — ISW-521 Programación en Ambiente Web I, UTN",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}

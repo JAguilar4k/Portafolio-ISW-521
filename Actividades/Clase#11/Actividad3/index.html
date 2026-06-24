@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Actividad 3 — Arquitectura Modular</title>
+  <style>
+    body { font-family: sans-serif; padding: 2rem; }
+    .producto-card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      max-width: 250px;
+    }
+    .precio { color: #2a7a2a; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Actividad 3 — Módulos ES6</h1>
+  <div id="app"></div>
+
+  <!--
+    type="module" es obligatorio para que el navegador soporte import/export nativamente.
+    Beneficios automáticos:
+      - Ejecuta diferido (como defer): el DOM ya existe al correr el script
+      - Modo estricto ("use strict") activado por defecto
+      - Cada módulo tiene su propio scope (no contamina window)
+  -->
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
