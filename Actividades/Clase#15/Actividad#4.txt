@@ -1,0 +1,8 @@
+1. 
+const fragment = document.createDocumentFragment
+li.forEach(element)) =>{ fragment.append(element)
+
+
+
+
+Es mas rapida ya que en vez de ir cargando uno por uno y mostrandolos se cargan todos y luego se muestran.

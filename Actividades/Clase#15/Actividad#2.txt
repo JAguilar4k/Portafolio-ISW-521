@@ -1,0 +1,4 @@
+1. 
+const lista =querySelectorAll('.list');
+console.log(lista[1]);
+2.De los dos metodos querySelectorAll es la pero opcion debido a que es estatico. mientras que traversalmente con siblking siempre se puede visitar el segundo dato

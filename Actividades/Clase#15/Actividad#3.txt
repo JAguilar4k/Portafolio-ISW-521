@@ -1,0 +1,2 @@
+1.Puede afectar a nivel de SQL Injection ya que no se encuentra validado. Tambien xss.
+Al detectar una entrada sospechosa utilizariamos classList para resaltar el elemento sospechoso de color rojo permitiendo la lectura mientras resaltar la seccion sospechosa ademas de mediante un listener cambiar a disabled el boton necesario para proceder hasta que la entrada sea corregida y modificada de manera correcta a un valor no sospechoso. Hasta que el valor sospechoso no sea eliminado no permitir proseguir.
