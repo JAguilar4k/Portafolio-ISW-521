@@ -1,0 +1,2 @@
+Al ser alta rotación de personal Angular seria bueno para evitar cambios a nivel arquitectónico.
+Angular a largo plazo es bien recomendado debido al TypeScript obligatorio

@@ -1,0 +1,1 @@
+Ninguna, solo se debe agregar otro estado y mapearlo en JSX con .map().

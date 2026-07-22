@@ -1,0 +1,1 @@
+Enrutador, manejo de estado global, Pasarelas de pago e Interfaz
